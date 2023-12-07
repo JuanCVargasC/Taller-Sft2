@@ -1,0 +1,6 @@
+cambio de puerto
+
+export PORT=3000
+echo $PORT
+El comando sirve para instalar el motor de vistas ejs
+npm install ejs 

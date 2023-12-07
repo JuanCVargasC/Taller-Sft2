@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include("./template/header.ejs") %>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Ejemplo de ejs</h1>
+        <% if (data.size > 0) { %>    
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>nombre</th>
+                        <th>valor</th>
+                        <th>Vegetariono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const [key, value] of data) { %>
+                        <tr>
+                            <td><%= value.id %></td>
+                            <td><%= value.name %></td>
+                            <td><%= value.value %></td>
+                            <td><%= value.vegetarian %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h4>No hay registros</h4>
+        <% } %>
+            <a href="/newDish" class="btn btn-primary">Agregar registro</a>
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
